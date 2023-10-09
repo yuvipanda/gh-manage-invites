@@ -1,33 +1,12 @@
 import { Octokit, RequestError } from "octokit";
 /**
  *
- * @param {string} orgSpec
- */
-async function parseOrgSpec(orgSpec) {
-  const parts = orgSpec.split(":");
-  if (parts.length === 1) {
-    return {
-      org: orgSpec,
-    };
-  } else if (parts.length === 2) {
-    const [org, team] = parts;
-    return {
-      org: org,
-      team_id: [teamInfo.data.id],
-    };
-  }
-}
-
-/**
- *
  * @param {Octokit} octokit
  * @param {string} organization An organization name or an organization:team name
  * @param {[Array<string]} teams
  * @param {Array<string>} usernames
  */
 export async function inviteUsers(octokit, organization, teams, usernames) {
-  const inviteTargetInfo = await parseOrgSpec(organization);
-  console.log(inviteTargetInfo);
   let missingUsers = [];
   let userIDs = new Map();
   for (const username of usernames) {
