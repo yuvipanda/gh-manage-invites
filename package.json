@@ -1,0 +1,30 @@
+{
+  "name": "gh-manage-invites",
+  "version": "0.0.2",
+  "description": "Manage mass invitations to GitHub organizations & teams from the commandline",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gh-manage-invites": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvipanda/gh-manage-invites.git"
+  },
+  "keywords": [
+    "github"
+  ],
+  "author": "Yuvi Panda",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/yuvipanda/gh-manage-invites/issues"
+  },
+  "homepage": "https://github.com/yuvipanda/gh-manage-invites#readme",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "octokit": "^3.1.1"
+  }
+}
