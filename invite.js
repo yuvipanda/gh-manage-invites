@@ -86,7 +86,6 @@ export async function inviteUsers(octokit, organization, teams, usernames) {
     } catch (e) {
       if (e instanceof RequestError) {
         // FIXME: Handle multiple errors?
-        console.log(e.response.data);
         const error = e.response.data.errors[0];
         switch (error.message) {
           case "Invitee is already a part of this organization":
