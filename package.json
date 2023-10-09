@@ -1,6 +1,6 @@
 {
   "name": "gh-manage-invites",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Manage mass invitations to GitHub organizations & teams from the commandline",
   "type": "module",
   "main": "index.js",
